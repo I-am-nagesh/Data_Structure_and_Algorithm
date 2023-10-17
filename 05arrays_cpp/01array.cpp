@@ -14,7 +14,7 @@ int main(){
 //  cout << INT_MAX << endl;
 //     cout << INT_MIN;
 
-    int arr2[5] = {2,3,4,5,6,};
+    int arr2[5] = {2,3,4,5,6};
     //maximum value of array
     int ans1 = INT_MIN;
     //minimum value of array
