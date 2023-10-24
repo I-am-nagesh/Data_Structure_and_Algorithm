@@ -70,8 +70,14 @@ int main(){
     //hollow triangle pattern
     cout<<"7 hollow triangle pattern"<<endl;
     for(row = 1; row<=5; row++){
-        
-    }
 
+    }
+    //pyramid pattern
+    cout<<"8 pyramid pattern"<<endl;
+    for(row = 1; row<=5; row++){
+
+    }
     return 0;
 }
+
+
