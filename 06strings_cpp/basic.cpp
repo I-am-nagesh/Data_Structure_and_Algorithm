@@ -1,6 +1,13 @@
+#include<bits/stdc++.h>
 #include<iostream>
 #include<string>
 using namespace std;
+
+//passing string to function
+void print_string(string str_5){
+    cout<<"passed string is: "<<str_5<<endl;
+    return;
+}
 
 int main(){
    
@@ -38,6 +45,22 @@ int main(){
     cout<<"string is: "<<str_4<<endl;
 
     //using stringstrem class
+
+    //passing string to function
+    string str_5 = "nagesh pandey";
+    print_string(str_5);
+
+    //some string operation  ---->iteration
+    cout<<"size of passed string: "<<str_5.size()<<endl;
+    cout<<"length of passed string: "<<str_5.length()<<endl;
+    cout<<"capacity of passed string: "<<str_5.capacity()<<endl;
+    str_5.resize(6);
+    cout<<"resized passed string: "<<str_5<<endl;
+    
+
+
+  
+    
 
 
     return 0;
