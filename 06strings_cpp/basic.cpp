@@ -56,12 +56,49 @@ int main(){
     cout<<"capacity of passed string: "<<str_5.capacity()<<endl;
     str_5.resize(6);
     cout<<"resized passed string: "<<str_5<<endl;
+     
+
+    string str_6 = "nagesh pandey";
+
+    //declaring an iteration
+    string :: iterator itr;
+    itr = str_6.begin();      //begin()--->print first character in string
+    cout<<*itr<<endl;
     
+    itr++;        //printing second character in string
+    cout<< *itr<<endl;
 
+    itr = str_6.end();        //end()--->print last character in string
+    cout<< *itr<<endl;
+    itr--;
+    cout<< *itr<<endl;
+    itr--;
+    cout<< *itr<<endl;
 
-  
+    //declaring a reverse iteration
+    string :: reverse_iterator ritr;
+
+    ritr = str_6.rbegin();    //rbegin()-->reverse begining
+    cout<< *ritr<<endl;
+    ritr++;
+    cout<< *ritr<<endl;
+
+    ritr = str_6.rend();
+    cout<< *ritr<<endl;
+    ritr--;
+    cout<< *ritr<<endl;
+    ritr--;
+    cout<< *ritr<<endl;
+
+    char str_7[20];
+    str_6.copy(str_7, 6, 7);    //copy(target character array, length to be copied, starting position)
+    str_7[6] = '\0';
+    cout<<"the copied string is: "<<str_7<<endl;
+
+    str_6.swap(str_3);
+    cout<<str_3<<endl;  //nagesh pandey
+    cout<<str_6<<endl;  //user given will be print
     
-
-
+    
     return 0;
 }
