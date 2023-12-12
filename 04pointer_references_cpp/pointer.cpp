@@ -1,6 +1,26 @@
 #include<iostream>
 using namespace std;
 
+//function to pass pointer
+void fun(int* ptr4){
+  *ptr4 = 5;
+}
+
+//function to swap two number using pointer
+void swap(int*x, int*y){
+  int temp = *x;
+  *x = *y;
+  *y = temp;
+}
+
+//function to double value of element in array using pointer
+void display(int* ptr5, int n){
+  for(int i =0; i<n; ++i){
+    cout<<(*(ptr5 + i))*2<<" ";
+  }
+}
+
+
 int main(){
 
     int a = 10;   //actual variable declaratoin
@@ -44,7 +64,34 @@ int main(){
     cout<<(void*)ptr3<<endl;
 
    char name = 'a';
-   cout<<(void*)&name;
+   cout<<(void*)&name<<endl;
      
+
+   //passing pointer in function
+
+   int x = 9;
+   cout<<"value of x before calling function: "<< x <<endl;
+   fun(&x);
+   cout<<"value of x after calling function: "<< x <<endl;
+
+   //swaping two number using pointer
+
+   int p = 2, q = 5;
+   cout<<"value of p and q before swaping: "<<p<<" "<<q<<endl;
+   swap(&p, &q);
+   cout<<"value of p and q after swapping: "<<p<<" "<<q<<endl;
+
+   //twice the element of array using pointer
+   
+   int arr1[] = {1,2,3,4,5};
+   int n = sizeof(arr1) / sizeof(int);
+
+   //ptr5 will store the address of first block of array
+   int* ptr5 = arr1;
+
+   //passing argument to a function as pointer
+   display(ptr5, n);
+
+
     return 0;
 }
