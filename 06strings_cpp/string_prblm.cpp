@@ -17,5 +17,8 @@ int main(){
         index++;
     }
     cout<<ans;
+
+    //check if string is rotated by two places
+    
     return 0;
 }
