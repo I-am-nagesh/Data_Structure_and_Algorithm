@@ -18,6 +18,7 @@ void display(int* ptr5, int n){
   for(int i =0; i<n; ++i){
     cout<<(*(ptr5 + i))*2<<" ";
   }
+  cout<<endl;
 }
 
 
@@ -82,7 +83,7 @@ int main(){
    cout<<"value of p and q after swapping: "<<p<<" "<<q<<endl;
 
    //twice the element of array using pointer
-   
+
    int arr1[] = {1,2,3,4,5};
    int n = sizeof(arr1) / sizeof(int);
 
@@ -91,6 +92,18 @@ int main(){
 
    //passing argument to a function as pointer
    display(ptr5, n);
+  
+
+   //reference variable
+   int num = 10;
+   int &temp = num;   //num and temp are same
+   cout<<temp<<endl;
+   temp++;
+   cout<<num<<endl;
+  
+   //verify reference vriable
+   cout<<&temp<<endl;
+   cout<<&num<<endl;
 
 
     return 0;
