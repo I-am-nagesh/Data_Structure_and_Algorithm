@@ -15,7 +15,7 @@ int main(){
     cout<< ptr1 <<endl;
     cout <<*ptr1<<endl; //print value at address available in pointer
 
-
+    //pointer with array
      int myNumber[4] = {25,50,75,100};
 
      for (int i = 0; i < 4; i++)
@@ -34,6 +34,17 @@ int main(){
      cout<<*(myNumber + 1)<<endl;
      cout<<*(myNumber + 2)<<endl;
      cout<<*(myNumber + 3)<<endl;
+
+     //pointer with character array
+    char arr[5] = "1234";
+    cout<<arr<<endl;  //print character value as it is
+    cout<<(void*)arr<<endl; //print memory address
+
+    char *ptr3 = arr;
+    cout<<(void*)ptr3<<endl;
+
+   char name = 'a';
+   cout<<(void*)&name;
      
     return 0;
 }
