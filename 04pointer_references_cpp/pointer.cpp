@@ -104,6 +104,18 @@ int main(){
    //verify reference vriable
    cout<<&temp<<endl;
    cout<<&num<<endl;
+  
+   //double pointer
+   int z = 10;
+   int *p1 = &z;
+   int **p2 = &p1;
+   cout<<z<<endl;
+   *p1+=4;
+   cout<<*p1<<endl;
+   cout<<z<<endl;
+   **p2+=10;
+   cout<<**p2<<endl;
+   cout<<z<<endl;
 
 
     return 0;
