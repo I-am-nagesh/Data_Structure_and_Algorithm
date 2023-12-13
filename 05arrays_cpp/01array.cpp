@@ -3,37 +3,37 @@
 #include<algorithm>
 using namespace std;
 int main(){
-    // int arr1[10];   //array declaration
-    // for(int i=0; i<10; i++){
-    //     cin>>arr1[i];
-    // }
-    // for (int i = 0; i < 10; i++)
-    // {
-    // cout<<arr1[i];
-    // }
-//  cout << INT_MAX << endl;
-//     cout << INT_MIN;
+    int arr1[5];   //array declaration
+    cout<<"give 5 element of array: ";
+    for(int i=0; i<5; i++){
+        cin>>arr1[i];
+    }
+    cout<<"your given array is: ";
+    for (int i = 0; i < 5; i++)
+    {
+    cout<<arr1[i]<<" ";
+    }
+    cout<<endl;
 
-    int arr2[5] = {2,3,4,5,6};
     //maximum value of array
     int ans1 = INT_MIN;
     //minimum value of array
     int ans2 = INT_MAX;
     for (int i = 0; i < 5; i++)
     {
-        if(arr2[i]>ans1){
-            ans1 = arr2[i];
+        if(arr1[i]>ans1){
+            ans1 = arr1[i];
         }
 
-        if(arr2[i]<ans2){
-            ans2 = arr2[i];
+        if(arr1[i]<ans2){
+            ans2 = arr1[i];
         }
-        // cout << ans;
+    
     }
     cout << "maximum value of array: "<<ans1<<endl;
     cout << "minimum value of array: "<<ans2<<endl;
-    cout <<sizeof(arr2)<<endl;
-    cout <<sizeof(arr2) / sizeof(arr2[0])<<endl;
+    cout <<"size of array: "<<sizeof(arr1)<<endl;
+    cout <<"size of array: "<<sizeof(arr1) / sizeof(arr1[0])<<endl;
 
   //serach element in array
   int index = -1;
@@ -41,7 +41,7 @@ int main(){
   cout << "enter a number which is either present or absent in an array: ";
   cin >> x;
   for(int i = 0; i<5; i++){
-    if(arr2[i] == x){
+    if(arr1[i] == x){
         index = i;
         break;
     }
@@ -49,25 +49,27 @@ int main(){
    cout <<"index of given number is "<< index <<endl;
 
    //reverse array
-   int start=0, end=4;
-   while(start < end){
-    swap(arr2[start],arr2[end]);
-    start++;
-    end--;
-   };
-   for(int i = 0; i<5; i++){
-   cout<<arr2[i]<<" ";
-   }
+//    cout<<"reverse array: ";
+//    int start=0, end=4;
+//    while(start < end){
+//     swap(arr1[start],arr1[end]);
+//     start++;
+//     end--;
+//    };
+//    for(int i = 0; i<5; i++){
+//    cout<<arr1[i]<<" ";
+//    }
 
-   //second maximum array
-   int second;
+   //second maximum element in array
+   int second = INT_MIN;
    for (int i = 0; i < 5; i++)
    {
-    if (arr2[i] != ans1)
-    second  = max(second, arr2[i]);
+    if (arr1[i] != ans1)
+    second  = max(second, arr1[i]);
    }
-   cout << second;
+   cout <<"second maximum element in array: "<<second<<endl;
 
+   //fibonacci series
    
    
     return 0;
