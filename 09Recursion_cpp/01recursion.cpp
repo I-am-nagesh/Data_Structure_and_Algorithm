@@ -42,6 +42,16 @@ void fun3(int n){
     cout<<m<<endl;
     print(m-1);
    }
+
+   void display(int x){
+    //base case
+    if(x == 2){
+        cout<<2<<endl;
+        return;
+    }
+    cout<<x<<endl;
+    display(x-2);
+   }
    
 int main(){
 
@@ -60,7 +70,12 @@ int main(){
     fun3(3);
 
     int m = 5;
+    cout<<"printing number from 5 to 1 using recursion:"<<endl;
     print(m);
+    
 
+    int x = 10;
+    cout<<"printing even number using recursion:"<<endl;
+    display(x);
 
 }
