@@ -33,6 +33,31 @@ int count(string str2, int index){
 
 }
 
+//function to reverse a string
+void rev(string &str3, int start, int end){
+
+    //base case
+    if(start>=end)
+    return;
+
+    char c = str3[start];
+    str3[start] = str3[end];
+    str3[end] = c;
+    rev(str3, start+1, end-1);
+
+}
+
+//function to change lowercase to uppercase
+void lowertoupper(string &str4, int index){
+
+    //base case
+    if(index==-1)
+    return;
+
+    str4[index] = 'A' + str4[index] - 'a';
+    lowertoupper(str4, index-1);
+}
+
 
 int main(){
     
@@ -44,7 +69,15 @@ int main(){
     string str2 = "rohit";
     cout<<count(str2, 4)<<endl;
 
-    
+    //reverse a string
+    string str3 = "rohit";
+    rev(str3, 0, 4);
+    cout<<str3<<endl;
+
+    //lowercase to uppercase
+    string str4 = "rohit";
+    lowertoupper(str4, 4);
+    cout<<str4<<endl;
 
 
 
