@@ -43,7 +43,18 @@ for (int i = 0; i <n; i++)
 
 
 //insertion sort logic
-//
+//insertion sort.....works by dividing array into two parts,sorted and unsorted
+
+for(int i = 1; i<n; i++){
+    for(int j = i; j>0; j--){
+        if(arr[j] < arr[j-1])
+        swap(arr[j], arr[j-1]);
+        else
+        break;
+    }
+}
+
+//printing sorted array elements
 cout<<"the sorted element of array in ascending oreder: ";
 for(int i = 0; i<n; i++){
     cout<< arr[i] <<" ";
