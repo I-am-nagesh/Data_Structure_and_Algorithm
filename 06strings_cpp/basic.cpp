@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -39,10 +39,11 @@ int main(){
     cout<<"string is: "<<str_3<<endl;
 
     //using getline() function-->enable to take multiple character without eliminating whitespaces
-    string str_4;
-    cout<<"enter string: ";
-    getline(cin, str_4);
-    cout<<"string is: "<<str_4<<endl;
+    string str4;
+    cout<<"enter string with white-space: ";
+    getline(cin, str4);
+    
+    cout<<"string is: "<<str4<<endl;
 
     //using stringstrem class
 
