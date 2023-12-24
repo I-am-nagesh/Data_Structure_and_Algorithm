@@ -31,19 +31,20 @@ int main(){
     cout << str_1 <<endl;
     cout << str_2 <<endl;
 
+     //using getline() function-->enable to take multiple character without eliminating whitespaces
+    string str_4;
+    cout<<"enter string with white-space: ";
+    getline(cin, str_4);
+    
+    cout<<"string is: "<<str_4<<endl;
+
+
     //taking string input
     //using cin
     string str_3;
     cout<<"enter string: ";
     cin>>str_3;
     cout<<"string is: "<<str_3<<endl;
-
-    //using getline() function-->enable to take multiple character without eliminating whitespaces
-    string str4;
-    cout<<"enter string with white-space: ";
-    getline(cin, str4);
-    
-    cout<<"string is: "<<str4<<endl;
 
     //using stringstrem class
 
