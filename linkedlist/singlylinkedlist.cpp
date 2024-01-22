@@ -12,6 +12,23 @@ class Node{
     }
 };
 
+  //function to check if a given element is present in the linkedlist
+int checkifpresent(Node* Head, int desiredelement){
+    Node* temp = Head;
+
+    //traverse the linkelist
+    while(temp != NULL){
+        //check if the current node data is equal to the desired element 
+        if(temp->data == desiredelement)
+        return 1; //return 1 if the element is found
+
+        //move to the next node
+        temp = temp->next;
+    }
+    return 0; //return 0 if the element is not found in the linkedlist
+}
+
+
 int main(){
     Node *Head, *Tail;
     Tail = Head = NULL;
@@ -64,6 +81,41 @@ int main(){
         }
     }
 
+    //    //delete a Node at start
+    // if(Head != NULL){
+    //     Node *temp = Head;
+    //     Head = Head->next;
+    //     delete temp;
+    // }
+
+
+    //delete a node at end
+    if(Head != NULL){
+        //only one noede is present
+        if(Head->next == NULL){
+            Node *temp = Head;
+            delete temp;
+            Head = NULL;
+        }
+        //more than one node is present
+        else{
+            Node *curr = Head;
+            Node *prev = NULL;
+
+            //curr->next is not NULL
+
+            while(curr->next != NULL){
+                prev = curr;
+                curr = curr->next;
+            }
+
+            prev->next = curr->next;
+            delete curr;
+        }
+    }
+
+
+
     Node *temp;
     temp = Head;
     while(temp){
@@ -71,6 +123,15 @@ int main(){
         temp = temp->next;
     }
 
+
+    int val = 8;  //element to be checked for presence in the linkedlist
+
+    //call the checkifpresent function
+    cout<<endl<<checkifpresent(Head, val)<<endl;
+
+
+
+    return 0;
 
 
 
