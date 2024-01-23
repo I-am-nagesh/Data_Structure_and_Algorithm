@@ -132,27 +132,27 @@ int main(){
     //     delete temp4;
     // }
     
-    //delete a node at end
-    if(head != NULL){
-        if(head->next == NULL){
-            Node* temp5 = head;
-            delete temp5;
-            head = NULL;
-        }
-        //more than one node is present
-        else{
-            Node* curr = head;
-            Node* prev = NULL;
-            //curr->next is not NULL
-            while(curr->next != NULL){
-                prev = curr->previous;
-                curr = curr->next;
-            }
-            prev->next = NULL;
-            curr->previous = NULL;
-            delete curr;
-        }
-    }
+    // //delete a node at end
+    // if(head != NULL){
+    //     if(head->next == NULL){
+    //         Node* temp5 = head;
+    //         delete temp5;
+    //         head = NULL;
+    //     }
+    //     //more than one node is present
+    //     else{
+    //         Node* curr = head;
+    //         Node* prev = NULL;
+    //         //curr->next is not NULL
+    //         while(curr->next != NULL){
+    //             prev = curr->previous;
+    //             curr = curr->next;
+    //         }
+    //         prev->next = NULL;
+    //         curr->previous = NULL;
+    //         delete curr;
+    //     }
+    // }
 
 
 

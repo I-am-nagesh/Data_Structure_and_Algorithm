@@ -217,9 +217,35 @@ int main(){
         // }
         // prev->next = curr->next;
         // delete curr;
+    
 
+        //delete middle of linkedlist
+        // Node* slow = Head, *fast = Head;
+        // while(fast != NULL && fast->next != NULL){
+        //     slow = slow->next;
+        //     fast = fast->next->next;
+        // }
+        // Node* prev = Head;
+        // while(prev != slow){
+        //     prev = prev->next;
+        // }
+        // prev->next = slow->next;
+        // delete slow;
 
-
+        int count = 0;
+        Node *tempo = Head;
+        while(tempo != NULL){
+            count++;
+            tempo = tempo->next;
+        }
+        count /= 2;
+        Node* curr = Head, *prev = NULL;
+        while(count--){
+            curr = curr->next;
+            prev = curr;
+        }
+        prev->next = curr->next;
+        delete curr;
 
    //printing linkelist
     Node *temp;
