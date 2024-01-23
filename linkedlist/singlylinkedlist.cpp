@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 class Node{
@@ -137,23 +138,87 @@ int main(){
     // }
 
 
-    //delete a node at specific location
-    int x = 3;
-    if( x == 1){
-        Node *temp = Head;
-        Head = Head->next;
-        delete temp;
-    }
-    x--;
-    Node *curr = Head;
-    Node *prev = NULL;
+    // //delete a node at specific location
+    // int x = 3;
+    // if( x == 1){
+    //     Node *temp = Head;
+    //     Head = Head->next;
+    //     delete temp;
+    // }
+    // x--;
+    // Node *curr = Head;
+    // Node *prev = NULL;
 
-    while(x--){
-        prev = curr;
-        curr = curr->next;
-    }
-    prev->next = curr->next;
-    delete curr;
+    // while(x--){
+    //     prev = curr;
+    //     curr = curr->next;
+    // }
+    // prev->next = curr->next;
+    // delete curr;
+
+    // //reverse linkedlist
+    // vector<int>ans;
+    // Node* tempo = Head;
+    // while(tempo != NULL){
+    //     ans.push_back(tempo->data);
+    //     tempo = tempo->next;
+    // }
+    // int i = ans.size() - 1;
+    // tempo = Head;
+    // while(tempo){
+    //     tempo->data = ans[i];
+    //     i--;
+    //     tempo = tempo->next;
+    // }
+
+
+        // //middle of linkedlist
+        // int count = 0;
+        // Node* temp = Head;
+        // while(temp != NULL){
+        //     count++;
+        //     temp = temp->next;
+        // }
+        // count /= 2;
+        // temp = Head;
+        // while(count--){
+        //     temp = temp->next;
+        // }
+        // cout<<temp->data<<endl;
+
+
+        // //middle of linkedlist using slow and fast pointer
+        // Node* slow = Head, *fast = Head;
+        // while(fast != NULL && fast->next != NULL){
+        //     slow = slow->next;
+        //     fast = fast->next->next;
+        // }
+        // cout<<slow->data<<endl;
+
+
+        // //remove Nth Node from end
+        // int N = 2;
+        // int count = 0;
+        // Node* tempo = Head;
+        // while(tempo != NULL){
+        //     count++;
+        //     tempo = tempo->next;
+        // }
+        // count -= N;
+        // if(count == 0){
+        //     tempo = Head;
+        //     Head = Head->next;
+        //     delete tempo;
+        // }
+        // Node* curr = Head, *prev = NULL;
+        // while(count--){
+        //     prev = curr;
+        //     curr = curr->next;
+        // }
+        // prev->next = curr->next;
+        // delete curr;
+
+
 
 
    //printing linkelist
