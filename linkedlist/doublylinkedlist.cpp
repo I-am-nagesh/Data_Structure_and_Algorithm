@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 class Node{
@@ -59,7 +60,7 @@ int main(){
      head->next->next->next->next->previous = new Node(arr[4]);
      
 
-     //printing the value of lunkedlist
+    //printing the value of linkedlist
      Node* temp;
      temp = head;
      while(temp){
@@ -90,8 +91,79 @@ int main(){
     }
     cout<<temp1->data<<endl;
 
+    //middle of linkedlist using slow and fast pointer
+    Node* slow = head, *fast = head;
+    while(fast != NULL && fast->next != NULL){
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    cout<<slow->data<<endl;
 
 
+    //reverse linkelist
+    vector<int>ans;
+    Node* temp2 = head;
+    while(temp2 != NULL){
+        ans.push_back(temp2->data);
+        temp2 = temp2->next;
+    }
+    int i = ans.size() - 1;
+    temp2 = head;
+    while(temp2){
+        temp2->data = ans[i];
+        i--;
+        temp2 = temp2->next;
+    }
+    //printing the value of linkedlist
+     cout<<"reversed linkedlist: ";
+     Node* temp3;
+     temp3 = head;
+     while(temp3){
+        cout<<temp3->data<<" ";
+        temp3 = temp3->next;
+     }
+     cout<<endl;
+
+    // //delete a Node at start
+    // if(head != NULL){
+    //     Node* temp4 = head;
+    //     head = head->next;
+    //     head->previous = NULL;
+    //     delete temp4;
+    // }
+    
+    //delete a node at end
+    if(head != NULL){
+        if(head->next == NULL){
+            Node* temp5 = head;
+            delete temp5;
+            head = NULL;
+        }
+        //more than one node is present
+        else{
+            Node* curr = head;
+            Node* prev = NULL;
+            //curr->next is not NULL
+            while(curr->next != NULL){
+                prev = curr->previous;
+                curr = curr->next;
+            }
+            prev->next = NULL;
+            curr->previous = NULL;
+            delete curr;
+        }
+    }
+
+
+
+    //printing the value of linkedlist
+     Node* temp0;
+     temp0 = head;
+     while(temp0){
+        cout<<temp0->data<<" ";
+        temp0 = temp0->next;
+     }
+     cout<<endl;
     return 0;
 }
 
