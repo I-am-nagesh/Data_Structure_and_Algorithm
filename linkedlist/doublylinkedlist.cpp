@@ -58,6 +58,41 @@ int main(){
      head->next->next->next->previous = new Node(arr[2]);
      head->next->next->next->next = new Node(arr[4]);
      head->next->next->next->next->previous = new Node(arr[4]);
+
+
+    //inserting a node at beginning
+    if(head == NULL){
+        head = new Node(0);
+    }
+     Node* temp6 = new Node(0);
+     head->previous = temp6;
+     temp6->next = head;
+     temp6->previous = NULL;
+     head = temp6;
+     
+
+    //inserting a node at end
+     Node* curr = head;
+     while(curr->next != NULL){
+        curr = curr->next;
+     }
+     Node* temp7 = new Node(12);
+     temp7->next = NULL;
+     temp7->previous = curr;
+     curr->next = temp7;
+
+
+    //delete node at beginning
+    if(head != NULL){
+        Node* temp8 = head;
+        head = head->next;
+        delete temp8;
+        head->previous = NULL;
+    }
+
+    //delete node at end
+    
+
      
 
     //printing the value of linkedlist
