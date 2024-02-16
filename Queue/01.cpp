@@ -87,4 +87,6 @@ int main(){
     q.push(51);
     q.pop();
     cout<<q.start()<<endl;
+    q.IsEmpty();
+    q.IsFull();
 }
